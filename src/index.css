@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-white font-sans overflow-x-hidden cursor-none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #2563eb, #7c3aed, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% auto;
+  animation: textShine 4s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
+}
+
+.glass-card {
+  @apply backdrop-blur-xl bg-glassBg border border-white/10 rounded-xl shadow-lg;
+}
+
+.glass-card-glow {
+  @apply glass-card border-[1px] border-transparent;
+  background: rgba(10, 10, 40, 0.2);
+  position: relative;
+}
+
+.glass-card-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(45deg, #2563eb, #7c3aed, #06b6d4);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.parallax-container {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.tilt-element {
+  transition: transform 0.3s ease-out;
+  transform-style: preserve-3d;
+}
+
+.floating-navbar {
+  @apply fixed top-4 left-1/2 -translate-x-1/2 bg-glassBg backdrop-blur-xl rounded-full px-4 py-2 border border-white/10 shadow-lg z-50;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050816;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #2563eb, #7c3aed);
+  border-radius: 3px;
+}
+
+.timeline-line {
+  @apply absolute left-6 top-0 h-full w-0.5 bg-gradient-to-b from-neon-blue via-neon-purple to-neon-cyan;
+}
+
+.timeline-dot {
+  @apply absolute left-6 w-4 h-4 rounded-full bg-neon-cyan -translate-x-1/2 glow;
+}
+
+.glow {
+  box-shadow: 0 0 10px #06b6d4, 0 0 20px #06b6d4;
+}
