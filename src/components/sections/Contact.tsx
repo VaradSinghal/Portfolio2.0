@@ -7,7 +7,7 @@ const Contact = () => {
   const socialLinks = [
     {
       name: 'Mail',
-      url: 'codewithvxrd@gmail.com',
+      url: 'mailto:codewithvxrd@gmail.com',
       icon: <Mail size={28} />,
       color: 'hover:text-[#333]',
       bg: 'hover:bg-[#333]/10',
