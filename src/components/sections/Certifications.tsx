@@ -5,6 +5,13 @@ import { Award, Code, BadgeCheck, } from 'lucide-react';
 
 const certifications = [
   {
+    title:  'Fundamentals of Object-Oriented Programming',
+    issuer: 'IIT Roorkee',
+    date: '2025',
+    description: 'Completed a course on the fundamentals of object-oriented programming, focusing on concepts like classes, objects, inheritance, and polymorphism.',
+    icon: <Code size={24} className="text-neon-blue" />,
+  },
+  { 
     title:  'Python',
     issuer: 'HackerRank',
     date: '2025',
@@ -34,6 +41,7 @@ const certifications = [
     technologies: ['API', 'Web Development', 'UI/UX'],
     icon: <BadgeCheck size={24} className="text-neon-purple" />,
   },
+  
 
 ];
 
