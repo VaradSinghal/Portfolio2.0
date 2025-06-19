@@ -1,7 +1,7 @@
 import React from 'react';
 import ScrollReveal from '../ScrollReveal';
 import GlassCard from '../GlassCard';
-import { Award, Code, BadgeCheck, } from 'lucide-react';
+import { Award, Code, BadgeCheck,AppWindow } from 'lucide-react';
 
 const certifications = [
   {
@@ -10,6 +10,13 @@ const certifications = [
     date: '2025',
     description: 'Completed a course on the fundamentals of object-oriented programming, focusing on concepts like classes, objects, inheritance, and polymorphism.',
     icon: <Code size={24} className="text-neon-blue" />,
+  },
+  {
+    title:  'IBM iOS and Android Mobile App Developer',
+    issuer: 'IBM',
+    date: '2025',
+    description: 'Completed a course on mobile app development for iOS and Android platforms, focusing on cross-platform frameworks and best practices.',
+    icon: <AppWindow size={24} className="text-neon-blue" />,
   },
   { 
     title:  'Python',

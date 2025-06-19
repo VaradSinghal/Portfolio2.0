@@ -8,7 +8,7 @@ const skillsData = [
   {
     category: 'App Development',
     icon: <Smartphone className="text-neon-blue" size={24} />,
-    skills: ['Flutter', 'Dart', 'Bloc', 'State Management', 'CRUD'],
+    skills: ['Flutter', 'Dart', 'Bloc', 'State Management', 'React Native'],
     color: 'from-neon-blue',
   },
   {
