@@ -9,8 +9,10 @@ import Education from './components/sections/Education';
 import Certifications from './components/sections/Certifications';
 import Projects from './components/sections/Projects';
 import Interests from './components/sections/Interests';
+import Achievements from './components/sections/Achievements';
 import Contact from './components/sections/Contact';
 import Footer from './components/Footer';
+import Clubs from './components/sections/Clubs';
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
         <Certifications />
         <Projects />
         <Interests />
+        <Achievements />
+        <Clubs />
         <Contact />
         <Footer />
       </motion.div>

@@ -1,8 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import ScrollReveal from '../ScrollReveal';
-import GlassCard from '../GlassCard';
-import { Book, Gamepad2, Users } from 'lucide-react';
+import { Book, Gamepad2 } from 'lucide-react';
 
 const Interests = () => {
   const books = [
@@ -17,15 +15,19 @@ const Interests = () => {
   ];
 
   return (
-    <section id="interests" className="py-20">
+    <section id="interests" className="section-spacing bg-cream-100">
+      <div className="container mx-auto px-4 max-w-7xl">
       <ScrollReveal>
-        <h2 className="text-4xl font-bold mb-12 text-gradient">Interests & Passions</h2>
+          <h2 className="text-4xl font-bold mb-4 text-gradient text-center">Interests & Passions</h2>
+          <p className="text-gray-600 text-lg mb-12 max-w-3xl mx-auto text-center">
+            Beyond coding, I enjoy exploring various hobbies and interests that keep me inspired and balanced.
+          </p>
       </ScrollReveal>
 
       {/* Books I Love */}
       <ScrollReveal className="mb-20">
         <div className="flex items-center gap-3 mb-6">
-          <Book size={24} className="text-neon-blue" />
+          <Book size={24} className="text-blue-600" />
           <h3 className="text-2xl font-semibold">Books I Love</h3>
         </div>
 
@@ -39,10 +41,10 @@ const Interests = () => {
                 transition={{ delay: index * 0.1 }}
                 className="flex-shrink-0 w-48 h-64"
               >
-                <GlassCard className="w-full h-full p-4 flex flex-col justify-end items-center">
+                <div className="professional-card w-full h-full p-4 flex flex-col justify-end items-center shadow-professional hover:shadow-professional-lg transition-all duration-300">
                   <img src={book.image} alt={book.title} className="max-h-32 object-contain mb-2" />
-                  <p className="font-medium text-center">{book.title}</p>
-                </GlassCard>
+                  <p className="font-medium text-center text-gray-900">{book.title}</p>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -51,156 +53,31 @@ const Interests = () => {
 
       <ScrollReveal className="mb-20" direction="right">
   <div className="flex items-center gap-3 mb-6">
-    <Gamepad2 size={24} className="text-neon-purple" />
+    <Gamepad2 size={24} className="text-purple-600" />
     <h3 className="text-2xl font-semibold">Esports Fanatic</h3>
   </div>
 
-  <div className="relative h-64 md:h-96 overflow-hidden glass-card">
-    <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-transparent z-10"></div>
-    <img
-      src="https://www.google.com/url ?sa=i&url=https%3A%2F%2Fthebridge.in%2Fesports%2Fesports-national-sports-day-india-technology-24744&psig=AOvVaw3B5qYHGhCQ933rFcdRShpe&ust=1748413004262000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLCqoJaAw40DFQAAAAAdAAAAABAE"
-      alt="Esports Arena"
-      className="w-full h-full object-cover object-center"
-    />
-    <div className="absolute inset-0 z-20 flex flex-col justify-center p-8">
-      <h4 className="text-3xl font-bold mb-4 text-white">Tactics & Reflexes</h4>
-      <p className="text-white/90 max-w-lg">
+          <div className="professional-card shadow-professional">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h4 className="text-2xl font-bold mb-4 text-gray-900">Tactics & Reflexes</h4>
+                <p className="text-gray-600 leading-relaxed">
         I'm deeply immersed in the world of esports — where lightning-fast reflexes, strategic depth,
         and teamwork converge. From competitive shooters to MOBAs, I admire how data, precision,
         and mental agility shape each match, influencing how I build, think, and collaborate.
       </p>
     </div>
-  </div>
-</ScrollReveal>
-
-
-<ScrollReveal>
-  <div className="flex items-center gap-3 mb-6">
-    <Users size={24} className="text-neon-blue" />
-    <h3 className="text-2xl font-semibold">QwikLab Developers</h3>
-  </div>
-
-  <GlassCard className="p-6">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div className="col-span-1 md:col-span-2">
-        <h4 className="text-xl font-medium mb-4">Cloud-First, Code-Forward</h4>
-        <p className="text-white/80 mb-4">
-          At QwikLab Developers, I engage with cloud-based labs that simulate real-world development
-          environments. My focus is on hands-on training with Google Cloud and AWS, sharpening skills
-          in containerization, APIs, and scalable infrastructure.
-        </p>
-        <p className="text-white/70">
-          Working in this team-oriented, challenge-driven setting has enhanced my ability to solve
-          complex problems under pressure while also preparing me for future DevOps and cloud engineering roles.
-        </p>
-      </div>
-      <div className="glass-card overflow-hidden h-48 md:h-auto">
-        <img
-          src="https://tudip.com/wp-content/uploads/2018/12/blog-images-Qwiklabs.jpg"
-          alt="QwikLabs"
-          className="w-full h-full object-cover object-center"
+              <div className="relative">
+                <img
+                  src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&h=300&fit=crop"
+                  alt="Gaming Setup"
+                  className="w-full h-48 object-cover rounded-lg"
         />
       </div>
-    </div>
-  </GlassCard>
-</ScrollReveal>
-<ScrollReveal>
-  <div className="flex items-center gap-3 mb-6">
-    <Users size={24} className="text-neon-blue" />
-    <h3 className="text-2xl font-semibold">Google Developer Group</h3>
-  </div>
-
-  <GlassCard className="p-6">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div className="col-span-1 md:col-span-2">
-        <h4 className="text-xl font-medium mb-4">Connect. Learn. Grow.</h4>
-        <p className="text-white/80 mb-4">
-          As an active member of the Google Developer Group, I engage with a vibrant community of
-          developers and tech enthusiasts. We organize meetups, tech talks, and hands-on workshops
-          focused on Google technologies such as Android, Firebase, Flutter, and more.
-        </p>
-        <p className="text-white/70">
-          Being part of GDG has empowered me to learn from industry experts, contribute to
-          open-source, and collaborate on impactful community projects that inspire innovation and
-          continuous growth.
-        </p>
-      </div>
-      <div className="glass-card overflow-hidden h-48 md:h-auto">
-        <img
-          src="data:image/png;base64,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"
-          alt="Google Developer Group"
-          className="w-full h-full object-cover object-center"
-        />
       </div>
     </div>
-  </GlassCard>
 </ScrollReveal>
-
-
-<ScrollReveal>
-  <div className="flex items-center gap-3 mb-6">
-    <Users size={24} className="text-neon-blue" />
-    <h3 className="text-2xl font-semibold">IEEE GRSSS</h3>
-  </div>
-
-  <GlassCard className="p-6">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div className="col-span-1 md:col-span-2">
-        <h4 className="text-xl font-medium mb-4">IoT, AI/ML & Real-World Impact</h4>
-        <p className="text-white/80 mb-4">
-          As an active member of IEEE GRSSS, I work on interdisciplinary projects combining IoT systems
-          and AI/ML models to solve real-world problems. We prototype solutions ranging from smart
-          environmental monitors to intelligent automation systems.
-        </p>
-        <p className="text-white/70">
-          My involvement has deepened my understanding of embedded systems, cloud integration, and
-          model deployment. The hands-on, team-driven nature of the club has also strengthened my ability
-          to collaborate, research, and innovate at scale.
-        </p>
       </div>
-      <div className="glass-card overflow-hidden h-48 md:h-auto">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCCIBoxSSbJhX-mGlgnmGJKTGv8kTIOw70Tw&s"
-          alt="IEEE GRSSS"
-          className="w-full h-full object-cover object-center"
-        />
-      </div>
-    </div>
-  </GlassCard>
-</ScrollReveal>
-
-
-<ScrollReveal>
-  <div className="flex items-center gap-3 mb-6">
-    <Users size={24} className="text-neon-blue" />
-    <h3 className="text-2xl font-semibold">NextTech Labs</h3>
-  </div>
-
-  <GlassCard className="p-6">
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div className="col-span-1 md:col-span-2">
-        <h4 className="text-xl font-medium mb-4">Innovate. Prototype. Disrupt.</h4>
-        <p className="text-white/80 mb-4">
-          At NextTech Labs, I collaborate on cutting-edge research in AI, blockchain, and
-          human-computer interaction. We brainstorm, prototype, and build tech-driven solutions that
-          challenge conventional thinking.
-        </p>
-        <p className="text-white/70">
-          This experience fuels my creativity and has taught me to lead with experimentation,
-          embrace failure, and contribute to projects that blend imagination with emerging tech.
-        </p>
-      </div>
-      <div className="glass-card overflow-hidden flex items-center justify-center rounded-lg max-h-60">
-        <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfxVHMDWDXxwzQh7DSC274ZD64VRPpUPuGGA&s"
-          alt="NextTech Labs"
-          className="w-full h-full"
-        />
-      </div>
-    </div>
-  </GlassCard>
-</ScrollReveal>
-
     </section>
   );
 };
