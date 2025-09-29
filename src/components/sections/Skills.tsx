@@ -1,7 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import ScrollReveal from '../ScrollReveal';
-import GlassCard from '../GlassCard';
 import { Smartphone, Satellite, ChevronRight, Server, Settings } from 'lucide-react';
 
 const skillsData = [

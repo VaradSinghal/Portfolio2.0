@@ -18,7 +18,7 @@ const certifications = [
   },
   {
     title: 'Certification of Merit(3rd Place) for the MineVerse Hackathon',
-    category: 'Hackathon Project',
+    issuer: 'SQAC SRMIST',
     date: '2025',
     description: 'A problem solving hackathon focused on testing DSA skills and Mental Aptitude',
     technologies: ['DSA', 'Mental Aptitude'],
@@ -40,7 +40,7 @@ const certifications = [
   },
   {
     title: 'Certification of appreciation for the InnovateX Hackathon',
-    category: 'Hackathon Project',
+    issuer: 'CTech SRMIST',
     date: '2025',
     description: 'An awareness project to spread awareness about clickbaits. Uses gemeni api to generate clickbait headlines and a website to monitor the data.',
     technologies: ['API', 'Web Development', 'UI/UX'],
@@ -70,7 +70,7 @@ const Certifications = () => {
                       <h3 className="text-lg font-semibold text-gray-900">{cert.title}</h3>
                       <span className="text-sm text-gray-500">{cert.date}</span>
                     </div>
-                    <p className="text-blue-600 text-sm font-medium mb-2">{cert.issuer || cert.category}</p>
+                    <p className="text-blue-600 text-sm font-medium mb-2">{cert.issuer}</p>
                     <p className="text-gray-600 text-sm mb-3">{cert.description}</p>
                     {cert.technologies && (
                       <div className="flex flex-wrap gap-1">
